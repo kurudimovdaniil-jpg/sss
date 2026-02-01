@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Школьный проект: Чат-бот без API</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Чат-бот для школьного проекта</h1>
+      <p class="subtitle">
+        Полностью бесплатный сайт на HTML, CSS и JavaScript. Работает на Vercel без серверов и платных API.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about">
+      <h2>О проекте</h2>
+      <p>
+        Это простой и понятный чат-бот, который отвечает на сообщения по заранее заданным правилам.
+        Проект подходит для индивидуальной работы: код короткий, логика прозрачная, размещение бесплатное.
+      </p>
+      <ul class="features">
+        <li>Frontend: чистые HTML, CSS, JavaScript</li>
+        <li>Бот отвечает локально (без интернета и API)</li>
+        <li>Можно легко расширить сценарии диалога</li>
+        <li>Публикация через GitHub + Vercel</li>
+      </ul>
+    </section>
+
+    <section class="chat">
+      <div class="chat-header">
+        <div class="status-dot" aria-hidden="true"></div>
+        <div>
+          <h2>Чат-бот</h2>
+          <p class="chat-status">Онлайн • отвечает локально</p>
+        </div>
+      </div>
+
+      <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+
+      <form id="chatForm" class="chat-input" autocomplete="off">
+        <input
+          id="userInput"
+          type="text"
+          placeholder="Напишите сообщение..."
+          maxlength="200"
+          required
+        />
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Школьный проект • 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

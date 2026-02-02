@@ -1,0 +1,118 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Школьный проект: Чат-бот с локальной логикой и OpenAI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <span class="node n1"></span>
+    <span class="node n2"></span>
+    <span class="node n3"></span>
+    <span class="node n4"></span>
+    <span class="node n5"></span>
+    <span class="node n6"></span>
+    <span class="node n7"></span>
+    <span class="node n8"></span>
+    <span class="node n9"></span>
+    <span class="node n10"></span>
+    <span class="link l1"></span>
+    <span class="link l2"></span>
+    <span class="link l3"></span>
+    <span class="link l4"></span>
+    <span class="link l5"></span>
+    <span class="link l6"></span>
+  </div>
+
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Черно-белая концепция • Без платных сервисов</p>
+        <h1>Чат-бот для школьного проекта</h1>
+        <p class="subtitle">
+          Базовый режим работает бесплатно и локально. При желании можно подключить OpenAI API через Vercel Functions.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#chat">Открыть чат</a>
+          <a class="btn ghost" href="#about">О проекте</a>
+        </div>
+        <div class="hero-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Vercel</span>
+          <span>GitHub</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h2>Ключевые факты</h2>
+        <ul>
+          <li>Полностью бесплатный запуск</li>
+          <li>Без сервера и базы данных</li>
+          <li>Локальная логика бота</li>
+          <li>Публичная ссылка на Vercel</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="panel about">
+      <div>
+        <h2>О проекте</h2>
+        <p>
+          Это простой и понятный чат-бот, который отвечает на сообщения по заранее заданным правилам.
+          Проект подходит для индивидуальной работы: код короткий, логика прозрачная, размещение бесплатное.
+        </p>
+      </div>
+      <ul class="features">
+        <li>Frontend: чистые HTML, CSS, JavaScript</li>
+        <li>Бот отвечает локально (без интернета и API)</li>
+        <li>Опционально: подключение OpenAI API (платный ключ)</li>
+        <li>Можно легко расширить сценарии диалога</li>
+        <li>Публикация через GitHub + Vercel</li>
+      </ul>
+    </section>
+
+    <section id="chat" class="panel chat">
+      <div class="chat-header">
+        <div class="status-dot" aria-hidden="true"></div>
+        <div>
+          <h2>Чат-бот</h2>
+          <p id="chatStatus" class="chat-status">Онлайн • отвечает локально</p>
+        </div>
+        <div class="chat-controls">
+          <label class="toggle">
+            <input id="useApi" type="checkbox" />
+            <span>Использовать OpenAI (если настроено)</span>
+          </label>
+          <p id="apiStatus" class="api-status">API: не подключено</p>
+        </div>
+      </div>
+
+      <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+
+      <form id="chatForm" class="chat-input" autocomplete="off">
+        <input
+          id="userInput"
+          type="text"
+          placeholder="Напишите сообщение..."
+          maxlength="200"
+          required
+        />
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Школьный проект • 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
